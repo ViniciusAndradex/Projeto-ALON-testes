@@ -7,4 +7,4 @@ Funcionalidade: Testar o sistema de login do ALON
 
     Cenário: Entrar no site e tentar efetuar login com um e-mail valido e senha invalida
         Dado que preenche o campo de e-mail valido e senha invalida
-        Então devo falhar no login.
+        Então o sistema deve apresentar uma mensagem senha minima 5 caractere.

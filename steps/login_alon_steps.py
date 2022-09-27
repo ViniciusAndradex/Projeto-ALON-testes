@@ -1,6 +1,7 @@
 from behave import *
 from login import Login
 from pages.login_alon_page import ALONLoginPage
+from selenium.webdriver.commom.by import By
 
 obj_alon_login = ALONLoginPage()
 obj_login = Login()
@@ -53,11 +54,18 @@ def step_impl(context):
 def step_impl(context):
     obj_login.logar('vinicius@gmail.com', '132')
 
-@then(u'devo falhar no login.')
-def step_impl(context):
-    pass
-
-
 @then(u'devo efetuar o login.')
 def step_impl(context):
-    pass
+    assert 'entrou' in obj_alon_login.driver.find_element(By.XPATH, '//div/h1').text
+
+@then(u'o sistema deve apresentar uma mensagem campo obrigatorio.')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then o sistema deve apresentar uma mensagem campo obrigatorio.')
+
+@then(u'o sistema deve apresentar uma mensagem email invalido.')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then o sistema deve apresentar uma mensagem email invalido.')
+
+@then(u'o sistema deve apresentar uma mensagem senha minima 5 caractere.')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then o sistema deve apresentar uma mensagem senha minima 5 caractere.')
