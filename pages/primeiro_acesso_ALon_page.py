@@ -20,6 +20,11 @@ class ALonPrimeiroAcessoPage(Browser):
             By.ID, ALonPrimeiroAcessoPageLocator.ID_INPUT_EMAIL)
         inserir_email.send_keys(email)
 
+    def confirmar_email(self, confirma_email):
+        inserir_confirma_email = self.driver.find_element(
+            By.ID, ALonPrimeiroAcessoPageLocator.ID_INPUT_CONFIRMAR_EMAIL)
+        inserir_confirma_email.send_keys(confirma_email)
+
     def escrever_senha(self, senha):
         inserir_senha = self.driver.find_element(
             By.ID, ALonPrimeiroAcessoPageLocator.ID_INPUT_SENHA)
