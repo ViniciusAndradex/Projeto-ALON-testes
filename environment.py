@@ -5,8 +5,8 @@ def before_all(context):
     context.browser = Browser()
 
 # Execulta os comandos antes de todos os testes iniciarem
-def after_all(context):
-    context.browser.browser_quit()
+# def after_all(context):
+#     context.browser.browser_quit()
     
 # Execulta os comandos entre cada cenário
 def after_scenario(context, scenario):
@@ -14,4 +14,4 @@ def after_scenario(context, scenario):
 
 # Execulta os comandos entre cada step
 def before_step(context, step):
-    context.browser.browser_wait(7)
+    context.browser.browser_wait(2)
